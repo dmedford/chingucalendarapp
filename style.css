@@ -1,0 +1,375 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap");
+
+/* Main Styling */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Container Styling */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Calendar Styling */
+
+#calendar-side {
+  height: 100%;
+  flex: 2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 10px;
+}
+
+.calendar-outline {
+  height: 95vh;
+  width: 90%;
+}
+
+.calendar-title {
+  height: 15%;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+}
+
+.calendar-title h1 {
+  font-size: 2.5rem;
+  color: #7cc0c9;
+}
+
+#currentYear {
+  font-weight: 300;
+}
+
+.calendar-month {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 5%;
+  border-bottom: 1px solid black;
+  font-size: 1.5rem;
+  color: #7cc0c9;
+  padding: 10px 0 10px 0;
+}
+
+.day-of-week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  color: #7cc0c9;
+  padding: 15px 0 15px 0;
+  font-size: 1rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.weekend {
+  color: #7cc0c9;
+}
+
+.calendar-body {
+  height: 70%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  margin: 0;
+}
+
+.calendar-date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.current-day {
+  border-radius: 50%;
+  background: #26b9cc;
+  color: #fff;
+}
+
+.prev-month {
+  color: #696868;
+}
+
+.next-month {
+  color: #696868;
+}
+
+/* Arrow Styles */
+.arrow {
+  width: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow-right {
+  padding-right: 10px;
+}
+
+.arrow i {
+  font-size: 3rem;
+  color: #7cc0c9;
+}
+/* Event Styling */
+
+#event-side {
+  background: linear-gradient(
+      180deg,
+      rgba(209, 226, 188, 0.9) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    url("img/mountain.jpg");
+  background-size: cover;
+  height: 100%;
+  flex: 1;
+  width: 100%;
+  font-family: "Open Sans Condensed", sans-serif;
+  position: relative;
+}
+
+.add-an-event {
+  position: absolute;
+  bottom: 25px;
+  right: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.add-an-event h2 {
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 300;
+  width: 150px;
+}
+
+.event-add-icon {
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.event-add-icon i {
+  color: #7bccd8;
+  font-size: 1.6rem;
+}
+
+.event-title {
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding-left: 50%;
+  transform: translateX(-15%);
+}
+
+.event-title h1 {
+  color: white;
+  font-weight: 500;
+}
+
+.event-day {
+  font-size: 2rem;
+}
+
+.event-date-month {
+  font-size: 4rem;
+}
+
+.event-items {
+  height: 60%;
+  display: flex;
+  padding: 25px 0 25px 0;
+}
+
+.event-day-number {
+  height: 100%;
+  border-right: 5px solid #fff;
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.event-details {
+  height: 100%;
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.event-details-specific {
+  height: 100%;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 80%;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.event-footer {
+  height: 10%;
+}
+
+/* Modal Stylings */
+
+.modal-container {
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.modal-container.show-modal {
+  display: block;
+}
+
+.modal {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  width: 800px;
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+}
+
+.modal-header {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 25px;
+}
+
+.modal-content-container {
+  padding: 25px;
+  position: relative;
+}
+
+.modal-header h3 {
+  margin: 0;
+  border-bottom: 1px solid #333;
+  color: #7cc0c9;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.modal-content {
+  padding: 40px;
+}
+
+.modal-content label {
+  color: #7cc0c9;
+}
+
+.modal-content select {
+  display: inline-block;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+  padding: 0 25px 0 5px;
+}
+
+.modal-content select:hover {
+  cursor: pointer;
+}
+
+.modal-form div {
+  margin: 15px 0;
+}
+
+.modal-form label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.modal-form .form-input {
+  padding: 8px;
+  width: 100%;
+}
+
+.close-btn {
+  background: transparent;
+  font-size: 25px;
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+.add {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 1.2rem;
+  padding-top: 25px;
+}
+
+.add i {
+  color: #7cc0c9;
+}
+
+.add h2 {
+  padding-left: 30px;
+  font-weight: 300;
+}
+
+.save-event {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.save-event button {
+  background-color: #7bccd8;
+  padding: 8px;
+  color: #fff;
+  width: 130px;
+  border-radius: 5px;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/943fbc5521.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Calendar App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="arrow arrow-left">
+        <button><i class="fas fa-angle-left"></i></button>
+      </div>
+      <div id="calendar-side">
+        <div class="calendar-outline">
+          <div class="calendar-title">
+            <h1 id="title">eCalendar</h1>
+            <h1 id="currentYear">2020</h1>
+          </div>
+          <div class="calendar-month">
+            <h2 class="prev-month"></h2>
+            <h2 class="cur-month"></h2>
+            <h2 class="next-month"></h2>
+          </div>
+          <div class="day-of-week">
+            <div><p>Sun</p></div>
+            <div><p>Mon</p></div>
+            <div><p>Tue</p></div>
+            <div><p>Wed</p></div>
+            <div><p>Thurs</p></div>
+            <div><p>Fri</p></div>
+            <div><p>Sat</p></div>
+          </div>
+          <div class="calendar-body">
+            <div class="calendar-date prev-month">26</div>
+            <div class="calendar-date prev-month">27</div>
+            <div class="calendar-date prev-month">28</div>
+            <div class="calendar-date prev-month">29</div>
+            <div class="calendar-date prev-month">30</div>
+            <div class="calendar-date"></div>
+            <div class="calendar-date"></div>
+            <div class="calendar-date"></div>
+            <div class="calendar-date"></div>
+            <div class="calendar-date"></div>
+            <div class="calendar-date"></div>
+            <div class="calendar-date"></div>
+            <div class="calendar-date"></div>
+            <div class="calendar-date"></div>
+            <div class="calendar-date"></div>
+            <div class="calendar-date"></div>
+            <div class="calendar-date"></div>
+            <div class="calendar-date"></div>
+            <div class="calendar-date"></div>
+            <div class="calendar-date"></div>
+            <div class="calendar-date"></div>
+            <div class="calendar-date"></div>
+            <div class="calendar-date"></div>
+            <div class="calendar-date"></div>
+            <div class="calendar-date"></div>
+            <div class="calendar-date"></div>
+            <div class="calendar-date"></div>
+            <div class="calendar-date"></div>
+            <div class="calendar-date"></div>
+            <div class="calendar-date"></div>
+            <div class="calendar-date"></div>
+            <div class="calendar-date"></div>
+            <div class="calendar-date"></div>
+            <div class="calendar-date"></div>
+            <div class="calendar-date"></div>
+            <div class="calendar-date"></div>
+            <div class="calendar-date next-month">1</div>
+            <div class="calendar-date next-month">2</div>
+            <div class="calendar-date next-month">3</div>
+            <div class="calendar-date next-month">4</div>
+            <div class="calendar-date next-month">5</div>
+            <div class="calendar-date next-month">6</div>
+          </div>
+        </div>
+      </div>
+      <div class="arrow arrow-right">
+        <button><i class="fas fa-angle-right"></i></button>
+      </div>
+      <div id="event-side">
+        <div class="event-title">
+          <h1 class="event-day">Monday</h1>
+          <h1 class="event-date-month">May 19</h1>
+        </div>
+        <div class="event-items">
+          <div class="event-day-number">
+            <h2>5</h2>
+            <h2>15</h2>
+            <h2>25</h2>
+            <h2></h2>
+          </div>
+          <div class="event-details">
+            <div class="event-details-specific">
+              <h2>Vet Appointment for dog</h2>
+              <h2>Concert</h2>
+              <h2>Moving Day</h2>
+              <h2></h2>
+            </div>
+          </div>
+        </div>
+        <div class="add-an-event">
+          <h2>Add An Event</h2>
+          <div class="event-add-icon">
+            <button class='add-event'><i class="fas fa-plus"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+
+    <div class="modal-container" id="modal">
+      <div class="modal">
+        <div class="modal-content-container">
+        <button class="close-btn" id="close">
+          <i class="fa fa-times"></i>
+        </button>
+        <div class="modal-header">
+          <h3>Event</h3>
+        </div>
+        
+        <div class="modal-content">
+          <label for="start-date">Start Date</label>
+          <select name="" id="start-date">
+            <option value="">Month</option>
+            <option value="jan">Jan</option>
+            <option value="feb">Feb</option>
+            <option value="mar">Mar</option>
+            <option value="apr">Apr</option>
+            <option value="may">May</option>
+            <option value="jun">Jun</option>
+            <option value="jul">Jul</option>
+            <option value="aug">Aug</option>
+            <option value="sept">Sept</option>
+            <option value="oct">Oct</option>
+            <option value="nov">Nov</option>
+            <option value="dec">Dec</option>
+          </select>
+          <select name="" id="start-date">
+            <option value="">Day</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+          </select>
+        
+          <label for="end-date">End Date</label>
+          <select name="" id="end-date">
+            <option value="">Month</option>
+            <option value="jan">Jan</option>
+            <option value="feb">Feb</option>
+            <option value="mar">Mar</option>
+            <option value="apr">Apr</option>
+            <option value="may">May</option>
+            <option value="jun">Jun</option>
+            <option value="jul">Jul</option>
+            <option value="aug">Aug</option>
+            <option value="sept">Sept</option>
+            <option value="oct">Oct</option>
+            <option value="nov">Nov</option>
+            <option value="dec">Dec</option>
+          </select>
+          <select name="" id="end-date">
+            <option value="">Day</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+          </select>
+          <div class="add add-people">
+            <i class="fas fa-user-plus"></i>
+            <h2>People</h2>
+          </div>
+          <div class="add add-location">
+            <i class="far fa-compass"></i>
+            <h2>Location</h2>
+          </div>
+          <div class="add add-description">
+            <i class="fas fa-bars"></i>
+            <h2>Description</h2>
+          </div>
+          <div class="save-event">
+            <button>Save Event</button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
