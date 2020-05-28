@@ -1,2 +1,2 @@
-Calendar App
+Calendar App.<br>
 A simple calendar application build with pure HTML, CSS, and Javascript. In it's current state. the app will show the current month and some sample events occuring during that month. Also, the weekends are styled in a different color and the previous and next month's days are greyed out. Finally, the current day of the month is circled in blue. It also has a modal that is opened with the sign up click in the bottom right. You can remove the modal with a click on the 'x' or cimply by clicking outside of the modal. 
